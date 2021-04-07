@@ -1,0 +1,465 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: content-box;
+}
+
+
+body, html{height:100%; background-color:#2e2c31}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
+::-webkit-scrollbar{display:none;}
+
+.landing-page{
+    width: 100%;
+    height: 100%;
+    display: flex;  
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/funky-lines.png');
+    background-blend-mode: multiply;
+    background-color: #2e2c31;
+    font-family: 'Bebas Neue', cursive;
+    color: #ffffff;
+    
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    margin-top: 30px;
+    text-shadow: 1px 2px  #8f61bd,
+    1px 1px #8f61bd,
+    1px 3px #8f61bd,
+    1px 4px #8f61bd;
+    letter-spacing: 2px;
+}
+
+.logo h1{
+    font-size: 100px;
+    line-height:70px;
+}
+
+.logo h2{
+    font-size: 35px;
+    line-height:40px;
+    
+}
+
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: thin;
+}
+
+.inputs .fp{
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-shadow: 1px 2px  #8f61bd,
+    1px 1px #8f61bd;
+    
+}
+
+.inputs .input{
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.inputs .inputText{
+    margin-bottom: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.inputText{
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.inputs input{
+    margin-left: 15px;
+}
+
+.input{
+    background-color: #9068be;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px white,
+    1px 2px white;
+    width: 62vw;
+}
+
+.custombut{
+    background-color:#7d5ca1;
+    padding:8px;
+    border-radius: 20px;
+    margin-bottom:14px;
+    margin-top: 14px;
+}
+
+.input button{
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #79599f;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 1px 1px white,
+    1px 2px white;
+    font-size: 18px;
+    font-family: 'Roboto Mono', sans-serif;
+    outline:none;
+    transition: 0.2s;
+}
+
+.input button:active{
+    background-color: #9066c4;
+}
+
+.inputText label{
+    margin-bottom:18px;
+    margin-top: 2px;
+}
+
+#custom-text{
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.808);
+}
+
+.input input{
+    display: none;
+}
+
+.inputText{
+    background-color: #9068be;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px white,
+    1px 2px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 62vw;
+}
+
+.inputText #text{
+    border: none;
+    outline: none;
+    padding:10px;
+    
+    border-radius: 20px 10px 10px 20px;
+    
+    font-family:'Roboto Mono', sans-serif;
+    resize: none;
+    margin-bottom: 14px;
+    overflow-y: scroll;
+    cursor: auto;
+    width: 46vw;
+    height: 100px;
+}
+
+#text::-webkit-scrollbar-track{
+  box-shadow: inset 0 0 6px rgba(78, 24, 80, 0.3);
+  border-radius: 20px;
+  background-color: #F5F5F5;
+}
+
+#text::-webkit-scrollbar{
+  width: 12px;
+  background-color: #F5F5F5;
+  border-radius: 0 20px 20px 0;
+  display: initial;
+}
+
+#text::-webkit-scrollbar-thumb
+{
+  border-radius: 20px;
+  box-shadow: inset 0 0 6px rgba(70, 21, 61, 0.3);
+  background-color: #5b4379;
+}
+
+.inputs #analyze{
+    padding: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: #79599f;
+    border: 1px solid #79599f;
+    box-shadow: 1px 1px #79599f,
+    1px 2px #79599f,
+    1px 3px #79599f;
+    font-size: 18px;
+    font-family: 'Roboto Mono', sans-serif;
+    outline:none;
+    transition: 0.2s;
+    font-weight: 600;
+    
+}
+
+.inputs #analyze:active{
+    background-color: rgb(202, 202, 202);
+}
+
+.results{
+    height:auto;
+    width: 100%;
+    margin-top: 40px;
+    background-color: #9068be;
+    padding-bottom: 70px;
+}
+
+.scdown{
+    height: 70px;
+    width: 100%;
+    background-color: #9068be;
+    border-radius: 50px 50px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ;
+}
+
+.scbutton #scbutton{
+    border: none;
+    outline: none;
+    background-color: #79599f;
+    color: white;
+    padding: 2px 16px ;
+    font-size: 60px;
+    border-radius: 20px;
+    box-shadow: 0.1px 1px 15px rgba(0, 0, 0, 0.63);
+    cursor: pointer;
+    
+}
+
+.scbutton{
+    margin-top: -70px;
+}
+
+.graphs{
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    border:none;
+    margin-left: 5.5%;
+    column-gap: 5vw;
+    row-gap: 50px;
+    color: white;
+    text-shadow: 1px 3px  #8f61bd,
+    1px 1px #8f61bd;
+
+}
+
+#word-stats{
+    font-family: "Roboto Mono", sans-serif;
+    font-size:18px;
+    display:flex;
+    flex-direction:column;
+
+}
+
+#bar{
+    background-color: #bda5d8;
+    width:240px;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px white,
+    1px 2px white;
+    display: flex;
+    overflow: hidden;
+}
+
+#bar-result{
+    border-radius: 20px 0px 0px 20px;
+    overflow: hidden;
+    
+}
+
+#word-cloud{
+    height: 100%;
+    background-color: #2e2c31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#popupdiv{
+    visibility: hidden;
+    width: 50px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 5;
+    margin-top: -50px;
+}
+
+#bar-result:hover #popupdiv{
+    visibility: visible;
+}
+
+#bar-result #popupdiv::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.fade{
+    width: 100%;
+    height: 35%;
+    background-image: linear-gradient(#9068be, #2e2c31);
+    
+}
+
+
+
+#showcloud{
+    width: 50%;
+    height: 70%;
+    margin: 0;
+    padding: 0;
+    background-color: #2e2c31;
+
+}
+
+#reset{
+    padding: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: none;
+    color: #79599f;
+    border: 1px solid #79599f;
+    box-shadow: 1px 1px #79599f,
+    1px 2px #79599f,
+    1px 3px #79599f;
+    font-size: 18px;
+    font-family: 'Roboto Mono', sans-serif;
+    outline:none;
+    transition: 0.2s;
+    font-weight: 600;
+}
+
+#reset:active{
+    background-color: rgb(202, 202, 202);
+}
+
+@media only screen and (min-width:768px){
+    .logo{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+
+    .logo h1{
+        font-size: 150px;
+        line-height:120px;
+    }
+    
+    .logo h2{
+        font-size: 55px;
+        line-height:50px;
+        
+    }
+
+    .inputs .input{
+        width: 470px;
+    }
+
+    .inputText{
+        width: 470px;
+    }
+
+    .inputText #text{
+        width: 370px; 
+        height: 100px;
+    }
+}
+
+@media (max-height: 750px){
+    .logo{
+        margin-bottom: 30px;
+    }
+
+    .logo h1{
+        font-size: 75px;
+        line-height:50px;
+    }
+    
+    .logo h2{
+        font-size: 25px;
+        line-height:40px;
+        
+    }
+
+    .inputs .input{
+        height:15vh;
+        margin-bottom: 2vh;
+    }
+
+    .inputText{
+        height:20vh;
+    }
+
+    .inputText #text{
+        height: 10vh;
+    }
+
+    #custom-text{
+        font-size: 14px;
+        line-height: 10px;
+    }
+
+    .input button{
+        font-size: 14px;
+    }
+
+    .inputText label{
+        font-size: 16px;
+        line-height: 10px;
+    }
+
+    .inputs .fp{
+        margin-bottom: 2vh;
+    }
+
+    .inputs .inputText{
+        margin-bottom: 6vh;
+    }
+}
+
+@media only screen and (max-width:564px){
+    #bar{
+       width: 90vw;
+    }
+}

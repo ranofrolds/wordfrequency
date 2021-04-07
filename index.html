@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Frequency</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton:wght@300;400;700;900&family=Nunito:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/7194c93342.js" crossorigin="anonymous"></script>
+</head>
+<body class="stop-scrolling">
+    <div class="landing-page">
+        <div class="logo">
+            <h1>WORD</h1>
+            <h2>frequency</h2>
+        </div>
+        <div class="inputs">
+            <div class="input">
+                <div class="custombut">
+                <input type="file" id="inputfile" accept=".txt" maxlength="2048"/>
+                <button type="button" id="custom">CHOOSE A FILE</button>
+                <span id="custom-text">No file chosen, yet.</span>
+                </div>
+            </div>
+            
+            <p class="fp">Or</p>
+
+            <div class="inputText">
+                <label for="user">Type a text:</label>
+                <textarea name="text" id="text" cols="52" rows="13" maxlength="2048" ></textarea>
+            </div>
+            <button id="analyze">Analyze</button>
+        </div>
+    </div>
+    <section class="results" id="results">
+        <div class="scdown" id="scdown">
+            <div class="scbutton">
+                <button id="scbutton"><i class="fas fa-angle-up"></i></button>
+            </div>
+        </div>
+
+        <div class="graphs" id="graphs">
+        </div>
+
+    </section>
+
+    <div class="fade">
+        
+    </div>
+    
+    <section id="word-cloud">
+        <div class="showcloud" id="showcloud">
+
+        </div>
+        <button id="reset">Reset</button>
+    </section>
+    <script src="/script.js"></script>
+</body>
+</html>
