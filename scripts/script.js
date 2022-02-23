@@ -1,5 +1,3 @@
-
-
 const fileinput=document.getElementById('inputfile');
 const button=document.getElementById('custom');
 const btext=document.getElementById('custom-text');
@@ -7,6 +5,7 @@ const analyze=document.getElementById('analyze');
 const textarea=document.getElementById('text');
 const scrollbutton=document.getElementById('scbutton');
 const bdy = document.getElementsByTagName("BODY")[0];
+const section= document.getElementById("results");
 
 let dic = {};
 let found =[];
@@ -41,7 +40,9 @@ analyze.addEventListener("click", (event)=>{
     if(countAnalyze==0){
         countAnalyze++;
         countReset=0;
+        
         if(fileinput.value||textarea.value){
+            
             document.getElementById('scdown').style.marginTop= "-110px"
             if(fileinput.value){
                 const reader = new FileReader();
@@ -77,7 +78,8 @@ analyze.addEventListener("click", (event)=>{
             }
             else{
                 const lines=textarea.value.split('\n')
-                
+                textarea.value="";
+                textarea.setAttribute("disabled", "true");
                 all=lines.join('\n')
                 words=all.split(/\W+/);
                 console.log(words)
@@ -109,6 +111,9 @@ analyze.addEventListener("click", (event)=>{
             }, 500)
             
         }
+        else{
+            countAnalyze=0;
+        }
         
     }
 })
@@ -118,12 +123,12 @@ scrollbutton.addEventListener("click", ()=>{
         countScDown++;
     
         bdy.classList.remove('stop-scrolling');
-            window.scrollTo({
-                top:850,
-                left:0,
-                behavior:'smooth'
-            });
-        
+            
+        window.scrollTo({
+            top:850,
+            left:0,
+            behavior:'smooth'
+        });
         
 
 
@@ -240,14 +245,14 @@ const reset = document.getElementById('reset');
 reset.addEventListener("click", ()=>{
     if(countReset==0){
         countReset++;
-    
+        textarea.removeAttribute("disabled");
         bdy.classList.add('stop-scrolling');
         window.scrollTo({
             top:0,
             left:0,
             behavior:'smooth'
         });
-
+        fileinput.value=null;
         textarea.value='';
         btext.innerHTML="No file chosen, yet.";
         dic = new Object();

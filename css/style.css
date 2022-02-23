@@ -7,9 +7,14 @@
 
 body, html{height:100%; background-color:#2e2c31}
 
+
 .stop-scrolling {
     height: 100%;
     overflow: hidden;
+}
+
+.display{
+    display: none;
 }
 
 ::-webkit-scrollbar{display:none;}
@@ -20,7 +25,7 @@ body, html{height:100%; background-color:#2e2c31}
     display: flex;  
     align-items: center;
     flex-direction: column;
-    background-image: url('/funky-lines.png');
+    background-image: url('../media/funky-lines.png');
     background-blend-mode: multiply;
     background-color: #2e2c31;
     font-family: 'Bebas Neue', cursive;
@@ -41,6 +46,13 @@ body, html{height:100%; background-color:#2e2c31}
     1px 3px #8f61bd,
     1px 4px #8f61bd;
     letter-spacing: 2px;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+
 }
 
 .logo h1{
@@ -54,6 +66,10 @@ body, html{height:100%; background-color:#2e2c31}
     
 }
 
+.graphs p{
+    word-break: break-all;
+    max-width: 15rem;
+}
 
 .inputs{
     display: flex;
@@ -129,6 +145,10 @@ body, html{height:100%; background-color:#2e2c31}
     font-family: 'Roboto Mono', sans-serif;
     outline:none;
     transition: 0.2s;
+}
+
+textarea:disabled{
+    background-color: white !important;
 }
 
 .input button:active{
